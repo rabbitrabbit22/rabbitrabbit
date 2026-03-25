@@ -39,7 +39,7 @@
 </style>
   <script>
     function reply() {
-      let text = document.getElementById("input").value;
+     let text = document.getElementById("input").value.toLowerCase();
       let response = "I don't know what to say.";
 
       if (text.includes("Hi")) {
