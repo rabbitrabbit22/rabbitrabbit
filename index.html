@@ -5,5 +5,23 @@
 </head>
 <body>
   <h1>Hi</h1>
+  <input id="input" placeholder="Write something">
+  <button onclick="reply()">Send</button>
+  <p id="output"></p>
+
+  <script>
+    function reply() {
+      let text = document.getElementById("input").value;
+      let response = "I don't know what to say.";
+
+      if (text.includes("Hi")) {
+        response = "Hi";
+      } else if (text.includes("fun")) {
+        response = "I am here.";
+      }
+
+      document.getElementById("output").innerText = response;
+    }
+  </script>
 </body>
 </html>
