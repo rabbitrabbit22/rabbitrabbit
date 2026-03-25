@@ -48,6 +48,8 @@
   <audio controls loop>
     <source src="undertale003.mp3">
   </audio>
+      <br>
+  <button onclick="changeSong()">Змінити пісню</button>
 </div>
   <script>
     function reply() {
@@ -64,6 +66,17 @@
 
       document.getElementById("output").innerText = response;
     }
+    <script>
+  let songs = ["undertale003.mp3", "undertale004.mp3", "undertale005.mp3"];
+  let current = 0;
+
+  function changeSong() {
+    current++;
+    if (current >= songs.length) current = 0;
+    let player = document.getElementById("player");
+    player.src = songs[current];
+    player.play();
+  }
   </script>
 </body>
 </html>
