@@ -89,6 +89,13 @@ function changeSong() {
   player.src = songs[current];
   player.play();
 }
+
+function prevSong() {
+  current--;
+  if (current < 0) current = songs.length - 1;
+  player.src = songs[current];
+  player.play();
+}
 </script>
 </body>
 </html>
