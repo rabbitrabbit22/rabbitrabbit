@@ -5,7 +5,7 @@
 </head>
 <body>
   <h1>Привіт</h1>
-  <input id="input" placeholder="Write something">
+  <input id="input" placeholder="Напишіть щось">
   <button onclick="reply()">Send</button>
   <p id="output"></p>
 <div style="text-align: center;">
@@ -52,13 +52,13 @@
   <script>
     function reply() {
      let text = document.getElementById("input").value.toLowerCase();
-      let response = "I don't know what to say.";
+      let response = "Не знаю";
 
-      if (text.includes("hi")) {
-        response = "hi";
-      } else if (text.includes("bye")) {
-        response = "bye";
-        } else if (text.includes("rabbit")) {
+      if (text.includes("привіт")) {
+        response = "привіт";
+      } else if (text.includes("бувай")) {
+        response = "бувай";
+        } else if (text.includes("кролі")) {
   response = ":3";
       }
 
