@@ -5,7 +5,8 @@
 </head>
 <body>
   <h1>Привіт</h1>
-  <input id="input" placeholder="Напишіть щось">
+  <input id="input" placeholder="Напишіть щось"
+  onkeydown="if(event.key==='Enter') reply()">
   <button onclick="reply()">Send</button>
   <p id="output"></p>
 <div style="text-align: center;">
