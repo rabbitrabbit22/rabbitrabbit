@@ -84,13 +84,11 @@ let current = 0;
 
 let player = document.getElementById("player");
 player.src = songs[current];
-player.play();
 
 player.addEventListener('ended', function() {
   current++;
   if (current >= songs.length) current = 0;
   player.src = songs[current];
-  player.play();
 });
 
 function changeSong() {
@@ -104,6 +102,7 @@ function prevSong() {
   current--;
   if (current < 0) current = songs.length - 1;
   player.src = songs[current];
+  player.play();
 }
 </script>
 </body>
