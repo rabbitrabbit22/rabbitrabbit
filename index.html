@@ -12,6 +12,12 @@
       margin-top: 15px;
       font-size: 20px;
 }
+    #newButton {
+  position: fixed;   
+  top: 10px;        
+  left: 10px;       
+  z-index: 1000;  
+}
   </style>
 </head>
 <body>
@@ -70,6 +76,9 @@
      <button onclick="prevSong()">Назад</button>
   <button onclick="changeSong()">Вперед</button>
 </div>
+   <a href="nowa.html">
+  <button>Нове</button>
+</a>
   <script>
     function reply() {
      let text = document.getElementById("input").value.toLowerCase();
@@ -113,9 +122,6 @@ function prevSong() {
   player.src = songs[current];
   player.play();
 }
-     <a href="news.html">
-  <button>Новини</button>
-</a>
 </script>
 </body>
 </html>
