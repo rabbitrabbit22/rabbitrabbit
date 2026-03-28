@@ -89,6 +89,7 @@ player.addEventListener('ended', function() {
   current++;
   if (current >= songs.length) current = 0;
   player.src = songs[current];
+  player.play();
 });
 
 function changeSong() {
