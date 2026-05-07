@@ -73,6 +73,12 @@
 </a>
     
     <p id="songTitle">Goreshit - the pain of relief</p>
+         
+<style>
+#songTitle {
+  color: white;
+}
+</style>
     
 <audio id="player" controls></audio>
     
@@ -81,13 +87,17 @@
   <button onclick="changeSong()">⏭</button>
 </div>
    <script>
+     
 let songs = ["pain.mp3", "thelast.mp3"];
      let titles = ["Goreshit - the pain of relief", "Sewerslvt - the last thing she sent me"]
 let current = 0;
-
+     
 let player = document.getElementById("player");
+     let songTitle = document.getElementById("songTitle");
+     
 player.src = songs[current];
-
+songTitle.textContent = titles[current];
+     
 player.addEventListener('ended', function() {
   current++;
   if (current >= songs.length) current = 0;
@@ -98,7 +108,10 @@ player.addEventListener('ended', function() {
 function changeSong() {
   current++;
   if (current >= songs.length) current = 0;
+  
   player.src = songs[current];
+    songTitle.textContent = titles[current];
+  
   player.play();
 }
 
