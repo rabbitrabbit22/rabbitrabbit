@@ -21,9 +21,9 @@
 </head>
 <body>
   <div id="banner">
-  <img src="https://i.pinimg.com/webp70/736x/27/30/dd/2730dda424c5bd7b3019316a923203dd.webp">
+  <img src="https://i.pinimg.com/1200x/8d/f5/d3/8df5d3fa7a4a6d6a3c56e1fa0d6d48ff.jpg">
 </div>
-  <h1>Hello world</h1>
+  <h1>Hello world!</h1>
     <style>
       #banner img {
   width: 100%;
@@ -68,18 +68,25 @@
   border-radius: 15px;
   margin-top: 20px;
 ">
+    <p id="songTitle">OST</p>
   <audio id="player" controls>
-    <source src="undertale003.mp3">
+    <source src="   ">
   </audio>
       <br>
-     <button onclick="prevSong()">Назад</button>
-  <button onclick="changeSong()">Вперед</button>
+     <button onclick="prevSong()">⏮</button> 
+  <button onclick="changeSong()">⏭</button>
 </div>
    <a href="nowa.html">
   <button id="newButton">Нове</button> 
 </a>
    <script>
-let songs = [""];
+     let titles = [
+  "     ",
+  "      "
+];
+
+document.getElementById("songTitle").innerText = titles[current];
+let songs = ["       "];
 let current = 0;
 
 let player = document.getElementById("player");
