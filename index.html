@@ -68,17 +68,19 @@
   border-radius: 15px;
   margin-top: 20px;
 ">
+    <a href="nowa.html">
+  <button id="newButton">Other</button> 
+</a>
+    
     <p id="songTitle">Goreshit - the pain of relief</p>
-  <audio id="player" controls>
+    
+  <audio id="player" controls src="pain.mp3">
     <source src="pain.mp3">
   </audio>
       <br>
      <button onclick="prevSong()">⏮</button> 
   <button onclick="changeSong()">⏭</button>
 </div>
-   <a href="nowa.html">
-  <button id="newButton">Other</button> 
-</a>
    <script>
 let songs = ["pain.mp3", "thelast.mp3"];
 let current = 0;
